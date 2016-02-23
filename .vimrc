@@ -1,17 +1,11 @@
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
-colorscheme corporation
-set nu
-
-execute pathogen#infect()
-syntax on
 set nu
 filetype plugin indent on
 colorscheme corporation
-autocmd FileType python set sw=4
-autocmd FileType python set ts=4
-autocmd FileType python set sts=4
+set sw=4
+set ts=4
+set sts=4
 imap jj <Esc>
 
 " YCM settings
