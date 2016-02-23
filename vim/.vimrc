@@ -17,3 +17,9 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 
 " Make html django html
 au BufNewFile,BufRead *.html set filetype=htmldjango
+
+" Ultisnips settings
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
