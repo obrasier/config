@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install build-essential git python-dev -y
-wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz
+wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz --no-check-certificate
 tar xf cmake-3.4.3.tar.gz
 cd cmake-3.4.3/
 ./configure
@@ -20,4 +20,4 @@ git submodule update --init --recursive
 ./install.py
 
 cd ~
-wget https://raw.githubusercontent.com/obrasier/config/master/.vimrc
+wget https://raw.githubusercontent.com/obrasier/config/master/vim/.vimrc
