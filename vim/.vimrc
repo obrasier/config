@@ -1,17 +1,11 @@
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
-colorscheme corporation
-set nu
-
-execute pathogen#infect()
-syntax on
 set nu
 filetype plugin indent on
 colorscheme corporation
-autocmd FileType python set sw=4
-autocmd FileType python set ts=4
-autocmd FileType python set sts=4
+set sw=4
+set ts=4
+set sts=4
 imap jj <Esc>
 
 " YCM settings
@@ -27,5 +21,11 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" set html files to htmldjangoy
+" Make html django html
 au BufNewFile,BufRead *.html set filetype=htmldjango
+
+" Ultisnips settings
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
