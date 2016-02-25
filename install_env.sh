@@ -1,11 +1,11 @@
 #!/bin/bash
-sudo apt-get install build-essential git python-dev checkinstall -y
+sudo apt-get install build-essential git python-dev -y
 wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz
 tar xf cmake-3.4.3.tar.gz
 cd cmake-3.4.3/
 ./configure
 make
-sudo checkinstall
+sudo make install
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle
