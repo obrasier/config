@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo add-apt-repository ppa:fcwu-tw/ppa
+sudo add-apt-repository ppa:fcwu-tw/ppa -y
 sudo apt-get update
 sudo apt-get install vim build-essential git python-dev -y
 wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz --no-check-certificate
