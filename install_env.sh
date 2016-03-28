@@ -1,15 +1,21 @@
 #!/bin/bash
 cp screen/.screenrc ~
 cp vim/.vimrc ~
-sudo add-apt-repository ppa:fcwu-tw/ppa -y
-sudo apt-get update
-sudo apt-get install vim build-essential git python-dev -y
-wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz --no-check-certificate
-tar xf cmake-3.4.3.tar.gz
-cd cmake-3.4.3/
-./configure
-make
-sudo make install
+if [[ `lsb_release -rs` == '12.04' ]]
+then
+	sudo add-apt-repository ppa:fcwu-tw/ppa -y
+	sudo apt-get update
+	sudo apt-get install vim -y
+	wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz --no-check-certificate
+	tar xf cmake-3.4.3.tar.gz
+	cd cmake-3.4.3/
+	./configure
+	make
+	sudo make install
+else
+	sudo apt-get install vim cmake -y
+fi
+sudo apt-get install build-essential python-dev git -y
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle
