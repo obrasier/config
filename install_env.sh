@@ -13,9 +13,9 @@ then
 	make
 	sudo make install
 else
-	sudo apt-get install vim cmake -y
+	sudo apt-get build-essential install vim cmake -y
 fi
-sudo apt-get install python-dev git -y
+sudo apt-get install keychain python-dev git -y
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle
@@ -29,4 +29,7 @@ git clone https://github.com/flazz/vim-colorschemes.git
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py
+
+echo "/usr/bin/keychain --clear $HOME/.ssh/id_rsa" >> .bashrc
+echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
 
