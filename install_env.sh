@@ -15,6 +15,8 @@ then
 else
 	sudo apt-get build-essential install vim cmake -y
 fi
+echo "Australia/Sydney" | sudo tee /etc/timezone
+sudo dpkg-reconfigure --frontend noninteractive tzdata
 sudo apt-get install keychain python-dev git -y
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
