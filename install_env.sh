@@ -3,7 +3,7 @@ cp screen/.screenrc ~
 cp vim/.vimrc ~
 if [[ `lsb_release -rs` == '12.04' ]]
 then
-	sudo add-apt-repository ppa:fcwu-tw/ppa -y
+	sudo add-apt-repository ppa:kalakris/vim -y
 	sudo apt-get update
 	sudo apt-get install build-essential vim -y
 	wget https://cmake.org/files/v3.4/cmake-3.4.3.tar.gz --no-check-certificate
