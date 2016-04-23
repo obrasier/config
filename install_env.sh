@@ -32,6 +32,14 @@ cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
 ./install.py
 
-echo "/usr/bin/keychain --clear $HOME/.ssh/id_rsa" >> .bashrc
+echo "/usr/bin/keychain $HOME/.ssh/id_rsa" >> .bashrc
 echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
+
+sudo cp -r ~/.vim* /edx/app/edxapp/
+sudo cp ~/.vimrc /edx/app/edxapp/
+sudo cp ~/.screenrc /edx/app/edxapp/
+
+sudo chown edxapp:edxapp /edx/app/edxapp/.vim* -R
+sudo chown edxapp:edxapp /edx/app/edxapp/.screenrc -R
+
 
