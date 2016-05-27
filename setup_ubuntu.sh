@@ -64,7 +64,7 @@ git clone https://github.com/flazz/vim-colorschemes.git
 
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
-#./install.py --clang-completer
+./install.py --clang-completer
 
-#echo "/usr/bin/keychain --quiet $HOME/.ssh/id_rsa" >> .bashrc
-#echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
+echo "/usr/bin/keychain --quiet $HOME/.ssh/id_rsa" >> .bashrc
+echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
