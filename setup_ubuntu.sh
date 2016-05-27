@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # ADD PPAs
-#ezame unity editor
-sudo add-apt-repository ppa:caldas-lopes/ppa
 
 #ppa manager for when you update
-sudo add-apt-repository ppa:webupd8team/y-ppa-manager
+sudo add-apt-repository ppa:webupd8team/y-ppa-manager -y
+
+#git
+sudo add-apt-repository ppa:git-core/ppa -y
 
 # sublime text 3
 sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y
@@ -28,7 +29,7 @@ sudo apt-get install icedtea-8-plugin openjdk-8-jre -y
 sudo apt-get install gnome-control-center gnome-online-accounts owncloud-client -y
 
 # utilities
-sudo apt-get install dconf-tools gnome-disk-utility gnome-tweak-tool unity-tweak-tool openssh-server p7zip-full rar unrar ppa-purge rsync samba ssh symlinks powertop tlp gparted -y
+sudo apt-get install dconf-tools gnome-disk-utility gnome-tweak-tool unity-tweak-tool openssh-server p7zip-full rar unrar ppa-purge rsync samba ssh symlinks powertop tlp gparted htop -y
 
 # development
 sudo apt-get install virtualbox build-essential cmake julia -y
@@ -63,7 +64,7 @@ git clone https://github.com/flazz/vim-colorschemes.git
 
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
-./install.py --clang-completer
+#./install.py --clang-completer
 
-echo "/usr/bin/keychain --quiet $HOME/.ssh/id_rsa" >> .bashrc
-echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
+#echo "/usr/bin/keychain --quiet $HOME/.ssh/id_rsa" >> .bashrc
+#echo "source $HOME/.keychain/$HOSTNAME-shk" >> .bashrc
