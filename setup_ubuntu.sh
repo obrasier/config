@@ -13,7 +13,7 @@ sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y
 
 #run update
 sudo apt-get update
-sudo apt-get install vim-nox git ezame y-ppa-manager -y
+sudo apt-get install keychain vim-nox git ezame y-ppa-manager -y
 
 # media
 sudo apt-get install vlc clementine inkscape gimp fonts-roboto -y
