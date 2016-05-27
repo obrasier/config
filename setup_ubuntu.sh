@@ -44,8 +44,8 @@ sudo pip install cython
 sudo pip3 install cython
 sudo pip install scipy numpy matplotlib
 sudo pip install ipython[all]
-sudo pip3 install ipython[all]
 sudo pip3 install scipy numpy matplotlib
+sudo pip3 install ipython[all]
 
 #latex
 sudo apt-get install texlive-full -y
